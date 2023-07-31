@@ -16,28 +16,28 @@ Locate the generated WAR file of the Spring Boot application in the 'target' dir
 ### Copy the WAR file to Tomcat's 'webapps' directory. 
 
 For example, if the WAR file is named 'boku-0.0.1.war', you can copy it to the Tomcat webapps directory using the command:
-    'cp target/boku-0.0.1.war <path-to-tomcat>/webapps/'
+    'cp target/boku-0.0.1.war <<path-to-tomcat>>/webapps/'
 
-Replace <path-to-tomcat> with the actual path to your Tomcat installation.
+Replace <<path-to-tomcat>> with the actual path to your Tomcat installation.
 
 **Note:** For this project, it says that we have to access the application as the root context at 'http://localhost:1337/' (without a context path). To achieve this, rename the 'boku-0.0.1.war' file to 'ROOT.war'. 
 Before copying the 'ROOT.war' file to the webapps folder, ensure that you remove any existing 'ROOT.war'(file for the TOMCAT Homepage) file and 'ROOT' folder from the webapps directory. (This is only necessary if you want to run the app in the ROOT context). 
-If you prefer to run the app with a specific context path, you can access it using 'http://localhost:1337/<context-path>/'. 
+If you prefer to run the app with a specific context path, you can access it using 'http://localhost:1337/<<context-path>>/'. 
 For instance, if the WAR file is named 'boku-0.0.1.war', the app can be accessed using 'http://localhost:1337/boku-0.0.1/'.
 
 ### Start or restart the Tomcat server. 
 
 If you are using Windows, use the following command:
-    '<path-to-tomcat>\bin\startup.bat'
+    '<<path-to-tomcat>>\bin\startup.bat'
 
-Again, replace <path-to-tomcat> with the actual path to your Tomcat installation.
+Again, replace <<path-to-tomcat>> with the actual path to your Tomcat installation.
 
 
 ## Step 3: Access the Deployed Spring Boot Application
 Once the Tomcat server is up and running, open a web browser and navigate to your application's URL:
 
 If you set a context path in Step 2, access your application using:
-    http://localhost:1337/<context-path>/
+    http://localhost:1337/<<context-path>>/
 
 If you deployed your application as the root context (without a context path), access it using:
     http://localhost:1337/
